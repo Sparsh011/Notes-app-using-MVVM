@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="@dimen/_3sdp"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardElevation="@dimen/_3sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/tv_note_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Note Title"
+            android:padding="@dimen/_4sdp"
+            android:textStyle="bold|italic"
+            android:layout_toStartOf="@+id/iv_delete_note"
+            android:textSize="@dimen/_17sdp"
+            android:maxLines="1"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_note_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_toStartOf="@+id/iv_delete_note"
+            android:layout_below="@+id/tv_note_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:padding="@dimen/_3sdp"
+            tools:text="Description"/>
+
+        <TextView
+            android:id="@+id/tv_timestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/iv_delete_note"
+            tools:text="TimeStamp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:padding="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_below="@+id/tv_note_description"/>
+
+        <ImageView
+            android:id="@+id/iv_delete_note"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_5sdp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
