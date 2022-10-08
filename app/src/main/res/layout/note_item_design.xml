@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:backgroundTint="@color/my_black"
     app:cardCornerRadius="@dimen/_3sdp"
     android:layout_margin="@dimen/_5sdp"
     app:cardElevation="@dimen/_3sdp">
@@ -18,13 +19,13 @@
             android:id="@+id/tv_note_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Note Title"
-            android:padding="@dimen/_4sdp"
-            android:textStyle="bold|italic"
             android:layout_toStartOf="@+id/iv_delete_note"
-            android:textSize="@dimen/_17sdp"
             android:maxLines="1"
-            android:textColor="@color/black"/>
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_23sdp"
+            android:textStyle="bold|italic"
+            tools:text="Note Title" />
 
         <TextView
             android:id="@+id/tv_note_description"
@@ -32,10 +33,10 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:layout_toStartOf="@+id/iv_delete_note"
+            android:padding="@dimen/_6sdp"
             android:layout_below="@+id/tv_note_title"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_14sdp"
-            android:padding="@dimen/_3sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17sdp"
             tools:text="Description"/>
 
         <TextView
@@ -43,11 +44,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toStartOf="@+id/iv_delete_note"
+            android:visibility="invisible"
             tools:text="TimeStamp"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_10sdp"
-            android:padding="@dimen/_3sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_3sdp"
             android:layout_below="@+id/tv_note_description"/>
 
         <ImageView

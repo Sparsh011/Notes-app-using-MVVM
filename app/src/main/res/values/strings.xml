@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Notes App Using MVVM</string>
-    <string name="last_updated_at">\"Last Updated at : \"</string>
+    <string name="app_name">Notes</string>
+    <string name="last_updated_at">\Last Updated at :\t</string>
     <string name="save_note">Save Note</string>
-    <string name="simple_date_format">dd/MM/yyyy : HH: mm</string>
+    <string name="simple_date_format">dd-MM-yyyy , HH: mm</string>
 </resources>

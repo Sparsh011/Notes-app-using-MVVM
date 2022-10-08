@@ -20,11 +20,12 @@ class AddUpdateNoteActivity : AppCompatActivity() {
     private lateinit var etDescription: EditText
     private lateinit var btnSaveNote: Button
     private lateinit var viewModel: NotesViewModel
-    var noteId = -1
+    private var noteId = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_update_note)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         initialisingViews()
         val noteType = intent.getStringExtra(Constants.NOTE_TYPE)
@@ -35,8 +36,11 @@ class AddUpdateNoteActivity : AppCompatActivity() {
 
             etTitle.setText(noteTitle)
             etDescription.setText(noteDescription)
+            supportActionBar!!.title = "Edit Note"
         }
-
+        else{
+            supportActionBar!!.title = "New Note"
+        }
         btnSaveNote.setOnClickListener{
             val noteTitle = etTitle.text.toString()
             val noteDescription = etDescription.text.toString()
