@@ -1,7 +1,7 @@
 # Notes App Using MVVM
 ### A simple notes making android application that is made on MVVM pattern. 
 
-### Tech Stack 
+## Tech Stack 
 <ul>
 <li>Kotlin</li>
 <li>Room Database(for CRUD)</li>
