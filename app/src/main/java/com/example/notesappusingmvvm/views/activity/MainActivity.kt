@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteDeleteInterfac
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar!!.title = "All Notes"
 
         initialisingViews()
 
@@ -41,7 +42,6 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteDeleteInterfac
 
         addNoteFAB.setOnClickListener{
             val intent = Intent(this@MainActivity, AddUpdateNoteActivity::class.java)
-            finish()
             startActivity(intent)
         }
     }
@@ -60,7 +60,6 @@ class MainActivity : AppCompatActivity(), NoteClickInterface, NoteDeleteInterfac
         intent.putExtra(Constants.NOTE_TITLE, note.noteTitle)
         intent.putExtra(Constants.NOTE_DESCRIPTION, note.noteDescription)
         intent.putExtra(Constants.NOTE_ID, note.id)
-        finish()
         startActivity(intent)
     }
 
